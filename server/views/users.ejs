@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% if(locals.users && locals.users.length) { %>
+      <% for(let user of users) { %>
+        <%= user.id %>
+      <% } %>
+      <% }else{ %>
+        <p>Infelizmente não há usuário cadastrado</p>
+    <%} %>
+  </body>
+</html>
