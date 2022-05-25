@@ -8,7 +8,8 @@
     <h1><%= title %></h1>
     <% if(locals.users && locals.users.length) { %>
       <% for(let user of users) { %>
-        <%= user.id %>
+        
+        <%- include('partials/user')
       <% } %>
       <% }else{ %>
         <p>Infelizmente não há usuário cadastrado</p>
