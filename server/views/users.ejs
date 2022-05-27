@@ -7,12 +7,21 @@
   <body>
     <h1><%= title %></h1>
     <% if(locals.users && locals.users.length) { %>
+      
       <% for(let user of users) { %>
+
+        <article id ="user<%= user.id %>">
+          <h2><%= user.nome %> <%= user.sobrenome%></h2>
+          <p><%= user.email %></p>
+          <p><%= user.idade %></p>
+        </article>
+
+        <% } %>
         
-        <%- include('partials/user')
-      <% } %>
       <% }else{ %>
+
         <p>Infelizmente não há usuário cadastrado</p>
+
     <%} %>
   </body>
 </html>
