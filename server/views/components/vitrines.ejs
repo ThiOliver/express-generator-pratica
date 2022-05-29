@@ -1,0 +1,14 @@
+<section>
+
+    <% if(locals.chinelos && locals.chinelos.length) { %>
+        <h2>Todos os Chinnelos</h2>
+
+        <% for(let chinelo of chinelos) { %>
+
+            <%-include('card', {chinelo}) %>
+<% } %>
+<% } else { %>
+    <h2> Sem Chinelos por hoje, volte mais tarde!</h2>
+
+    <% } %>
+        </section>
