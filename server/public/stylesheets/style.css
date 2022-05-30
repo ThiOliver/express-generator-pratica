@@ -1,8 +1,24 @@
 body {
+  
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+article[data-exclusiva="sim"] {
+  position: relative;
+}
+
+article[data-exclusiva="sim"]::after {
+  position: absolute;
+  border-radius: 32px;
+  background-color: #00B7FF;
+  color: white;
+  content: "Exclusiva";
+  font-size: 14px;
+  padding: 4px, 8px;
+  right: 32px;
+  top: 32px;
 }
